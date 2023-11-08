@@ -2,7 +2,7 @@
 ROM used:   1284/8192 (16%)
             1284/8192 (16%) including unused fragments
 
-            1.2 Average locations per line
+            1.1 Average locations per line
             11.4 Average locations per statement
 
 RAM used:   10/368 (3%) at main() level
@@ -13,13 +13,13 @@ Stack size: 8
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-   62     8   7  Sensor de temperatura DS18B20.c
-  684     0   0  ..\..\..\..\..\Program Files\PICC\Devices\16F877A.h
+   56     8   7  Sensor de temperatura DS18B20.c
+  708     0   0  ..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F877A.h
    93    22  19  1wire.c
    27    14  12  ds1820.c
   239    69  61  flex_lcd.h
 ----- -----
- 1105   113 Total
+ 1123   113 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -31,7 +31,7 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0    316  25   13    481  4.0  ds1820_read
  Inline         2    319  4.1  @SITOF
  Inline        14    384  4.4  @DIVFF
-0      8   1    0    186  5.5  @const656
+0      8   1    0    186  5.5  @const719
 0     44   3    1    328  2.7  lcd_send_nibble
 0     37   3    1    362  2.3  lcd_read_nibble
  Inline         3    165  3.3  lcd_read_byte
@@ -40,25 +40,25 @@ Page ROM  %  RAM    Vol Diff  Functions:
  Inline         4    186  5.5  lcd_gotoxy
 0     52   4    1    275  3.9  lcd_putc
 0     61   5    1    160  2.5  MAIN
-0     11   1    0             @const691
-0     89   7    5             @PSTRINGCN7_678
+0     11   1    0             @const754
+0     89   7    5             @PSTRINGCN7_741
  Inline        13             @MULFF
  Inline         5             @FTOSD
 0     79   6   13             @DIV3232
-0    341  27   13             @PRINTF_L32D_678FPFPF
+0    341  27   13             @PRINTF_L32D_741FPFPF
  Inline         0             @cinit1
 
 Program metrics:
     Functions               15
     Statements              113
-    Comments                297
+    Comments                322
     Volume (V)              7312
     Difficulty (D)          55.0
     Effort to implement (E) 401855
     Time to implement (T)   6 hours, 12 minutes
     Est Delivered Bugs (B)  2
     Cyclomatic Complexity   14
-    Maintainability (MI)    135
+    Maintainability (MI)    145
 
  Segment     Used  Free
 -----------  ----  ----

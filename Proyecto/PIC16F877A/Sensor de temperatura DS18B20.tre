@@ -1,12 +1,13 @@
 ÀÄSensor de temperatura DS18B20
    ÀÄMAIN  0/61  Ram=1
       ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
       ÃÄlcd_init  0/48  Ram=2
       ³  ÃÄ@delay_ms1  0/20  Ram=1
       ³  ÃÄlcd_send_nibble  0/44  Ram=1
       ³  ÃÄ@delay_ms1  0/20  Ram=1
       ³  ÃÄlcd_send_nibble  0/44  Ram=1
-      ³  ÃÄ@const656  0/8  Ram=0
+      ³  ÃÄ@const719  0/8  Ram=0
       ³  ÀÄlcd_send_byte  0/61  Ram=3
       ³     ÃÄlcd_read_byte  (Inline)  Ram=3
       ³     ³  ÃÄlcd_read_nibble  0/37  Ram=1
@@ -30,7 +31,7 @@
       ³  ÃÄ@SITOF  (Inline)  Ram=2
       ³  ÃÄ@DIVFF  (Inline)  Ram=14
       ³  ÀÄ@delay_ms1  0/20  Ram=1
-      ÃÄ@PSTRINGCN7_678  0/89  Ram=5
+      ÃÄ@PSTRINGCN7_741  0/89  Ram=5
       ³  ÃÄlcd_putc  0/52  Ram=1
       ³  ³  ÃÄlcd_send_byte  0/61  Ram=3
       ³  ³  ³  ÀÄ*
@@ -44,7 +45,7 @@
       ³  ³     ÀÄ*
       ³  ÀÄlcd_putc  0/52  Ram=1
       ³     ÀÄ*
-      ÃÄ@PRINTF_L32D_678FPFPF  0/341  Ram=13
+      ÃÄ@PRINTF_L32D_741FPFPF  0/341  Ram=13
       ³  ÃÄ@MULFF  (Inline)  Ram=13
       ³  ÃÄ@FTOSD  (Inline)  Ram=5
       ³  ÃÄ@DIV3232  0/79  Ram=13

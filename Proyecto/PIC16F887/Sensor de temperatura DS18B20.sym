@@ -1,71 +1,71 @@
-004-005 @READ_PROGRAM_MEMORY8.P1
-004-005 @WRITE_PROGRAM_MEMORY8.P2
-015     CCP_1_LOW
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
 015     CCP_1
+015     CCP_1_LOW
 016     CCP_1_HIGH
-01B     CCP_2
 01B     CCP_2_LOW
+01B     CCP_2
 01C     CCP_2_HIGH
 020-023 temperatura
-024-027 @PRINTF_L32D_685FPFPF.P1
+024-027 @PRINTF_L32D_748FPFPF.P1
 024     lcd_init.i
-024     @PSTRINGCN7_685.P1
+024     @PSTRINGCN7_748.P1
 024     ds1820_read.busy
 024     MAIN.@SCRATCH1
 025     ds1820_read.temp1
 025     lcd_init.@SCRATCH1
-025     @PSTRINGCN7_685.@SCRATCH1
+025     @PSTRINGCN7_748.@SCRATCH1
 026     ds1820_read.temp2
-026     @PSTRINGCN7_685.@SCRATCH2
+026     @PSTRINGCN7_748.@SCRATCH2
 027-028 ds1820_read.temp3
-027     @PSTRINGCN7_685.@SCRATCH3
-028     @PRINTF_L32D_685FPFPF.P1
-028     @PSTRINGCN7_685.@SCRATCH4
+027     @PSTRINGCN7_748.@SCRATCH3
+028     @PRINTF_L32D_748FPFPF.P1
+028     @PSTRINGCN7_748.@SCRATCH4
 029-02C ds1820_read.result
-029     @PRINTF_L32D_685FPFPF.@SCRATCH1
-02A     @PRINTF_L32D_685FPFPF.@SCRATCH2
-02B     @PRINTF_L32D_685FPFPF.@SCRATCH3
-02C     @PRINTF_L32D_685FPFPF.@SCRATCH4
-02D     onewire_write.data
+029     @PRINTF_L32D_748FPFPF.@SCRATCH1
+02A     @PRINTF_L32D_748FPFPF.@SCRATCH2
+02B     @PRINTF_L32D_748FPFPF.@SCRATCH3
+02C     @PRINTF_L32D_748FPFPF.@SCRATCH4
 02D-02E @SITOF.P1
 02D     onewire_read.count
+02D     onewire_write.data
 02D     onewire_reset.@SCRATCH1
 02D     ds1820_read.@SCRATCH1
-02D     @PRINTF_L32D_685FPFPF.@SCRATCH5
+02D     @PRINTF_L32D_748FPFPF.@SCRATCH5
 02E     @delay_us1.P1
-02E     onewire_read.data
 02E     onewire_write.count
+02E     onewire_read.data
 02E     ds1820_read.@SCRATCH2
-02E     @PRINTF_L32D_685FPFPF.@SCRATCH6
+02E     @PRINTF_L32D_748FPFPF.@SCRATCH6
 02F     ds1820_read.@SCRATCH3
-02F     @PRINTF_L32D_685FPFPF.@SCRATCH7
+02F     @PRINTF_L32D_748FPFPF.@SCRATCH7
 030     ds1820_read.@SCRATCH4
-030     @PRINTF_L32D_685FPFPF.@SCRATCH8
+030     @PRINTF_L32D_748FPFPF.@SCRATCH8
 031-034 @DIVFF.P1
-031     lcd_putc.c
-031-034 @DIV3232.P1
 031-034 @FTOSD.P2
-031-034 @MULFF.P3
-032     @delay_ms1.P1
+031-034 @DIV3232.P3
+031-034 @MULFF.P4
+031     lcd_putc.c
 032     lcd_gotoxy.x
+032     @delay_ms1.P1
 033     lcd_gotoxy.y
 034     lcd_gotoxy.address
-035-038 @DIV3232.P1
+035-038 @DIVFF.P1
 035-038 @MULFF.P2
-035-038 @DIVFF.P3
+035-038 @DIV3232.P3
 035     lcd_gotoxy.@SCRATCH1
 035     @FTOSD.@SCRATCH1
 036     lcd_send_byte.address
 037     lcd_send_byte.n
 038     lcd_read_byte.low
 038     lcd_send_byte.@SCRATCH1
-039     lcd_send_nibble.nibble
 039     lcd_read_byte.high
+039     lcd_send_nibble.nibble
 039     @DIVFF.@SCRATCH1
 039     @MULFF.@SCRATCH1
 039     @DIV3232.@SCRATCH1
-03A.0   lcd_read_nibble.retval_0
 03A     lcd_read_nibble.retval
+03A.0   lcd_read_nibble.retval_0
 03A.1   lcd_read_nibble.retval_1
 03A.2   lcd_read_nibble.retval_2
 03A.3   lcd_read_nibble.retval_3
@@ -96,7 +96,7 @@
 ROM Allocation:
 000004  LCD_INIT_STRING.call
 000008  LCD_INIT_STRING.data
-00000C  @const698.call
+00000C  @const761.call
 000017  @delay_ms1
 00002B  lcd_send_nibble
 000057  lcd_read_nibble
@@ -112,9 +112,9 @@ ROM Allocation:
 0001B7  @DIVFF
 000296  lcd_putc
 0002AD  lcd_gotoxy
-0002CA  @PSTRINGCN7_685
+0002CA  @PSTRINGCN7_748
 000323  @DIV3232
-000372  @PRINTF_L32D_685FPFPF
+000372  @PRINTF_L32D_748FPFPF
 000386  @MULFF
 00040C  @FTOSD
 0004C7  @cinit1
@@ -122,22 +122,21 @@ ROM Allocation:
 0004D9  @cinit2
 
 Project Directory:
-    E:\Martin Hdez\Desktop\CCS 16F\887\Práctica 16\
+    C:\Users\victo\OneDrive\Documentos\X-TRAINER-hands-on\CCS\PIC16F\16-DS18B20-CCS-PIC16F887-877A\Proyecto\PIC16F887\
 
 Project Files:
-    Sensor de temperatura DS18B20.c                         [24-feb.-22 15:27  CRC=927FAC6C]
-    ..\..\..\..\..\Program Files\PICC\Devices\16F887.h      [15-ene.-18 15:53  CRC=9C71CB72]
-    1wire.c                                                 [24-feb.-22 15:25  CRC=7A9F9ED2]
-    ds1820.c                                                [24-feb.-22 15:25  CRC=DC1B0575]
-    flex_lcd.h                                              [24-feb.-22 15:25  CRC=282E02A0]
+    Sensor de temperatura DS18B20.c                         [30-ago.-23 11:11  CRC=0F502681]
+    ..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICCDEMO\Devices\16F887.h [02-may.-23 08:27  CRC=A824942D]
+    1wire.c                                                 [24-feb.-22 23:03  CRC=7A9F9ED2]
+    ds1820.c                                                [24-feb.-22 23:03  CRC=DC1B0575]
+    flex_lcd.h                                              [24-feb.-22 23:03  CRC=282E02A0]
 
-Source signature=D6082165
+Source signature=5E8B6435
 Program memory checksum=0000
-Program memory CRC=0000
 Hex file CRC=664D
 
 Units:
-    Sensor de temperatura DS18B20 (main)
+    C:\Users\victo\OneDrive\Documentos\X-TRAINER-hands-on\CCS\PIC16F\16-DS18B20-CCS-PIC16F887-877A\Proyecto\PIC16F887\Sensor de temperatura DS18B20 (main)
 
 Compiler Settings:
     Processor:      PIC16F887
@@ -146,7 +145,10 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32
-    Compile Mode:       CCS5
+    Compile Mode:   CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
 
 Output Files:
     XREF file:   Sensor de temperatura DS18B20.xsym
